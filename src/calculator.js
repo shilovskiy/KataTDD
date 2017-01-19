@@ -4,8 +4,26 @@
 
 
 class Calculator{
+    constructor(){
+        this.defaultValue = 0;
+    }
+
+
     summ(str){
-        return 0;
+        var result;
+
+        if (str.length==1){
+            result = parseInt(str);
+
+        }else{
+            if (str.indexOf(',')>0){
+            var digits = str.split(',');
+            result = parseInt(parseInt(digits[0])+parseInt(digits[1]));
+        }else{
+            result = this.defaultValue
+        }
+        }
+        return result;
     }
 }
 
