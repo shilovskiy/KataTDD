@@ -3,10 +3,10 @@
  */
 
 
-class calculator{
-
-    construstor(str){
-
-        }
-
+class Calculator{
+    summ(str){
+        return 0;
+    }
 }
+
+module.exports = Calculator;
