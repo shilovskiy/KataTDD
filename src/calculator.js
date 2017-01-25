@@ -8,14 +8,15 @@ class Calculator {
         this.defaultValue = 0;
     }
 
-    calculateSumm(str) {
-        var digits = str.split(',');
+    calculateSumm(str,separator) {
+        var digits = str.split(separator);
+        console.log(digits);
         return digits.reduce((total, d) => {
             return parseInt(total) + parseInt(d);
         });
     }
 
-    summ(str) {
+    summ(str,separator) {
         var result;
 
 
@@ -23,8 +24,8 @@ class Calculator {
             result = parseInt(str);
 
         } else {
-            if (str.indexOf(',') > 0) {
-                result = this.calculateSumm(str);
+            if (str.indexOf(separator) > 0) {
+                result = this.calculateSumm(str,separator);
             } else {
                 result = this.defaultValue
             }
