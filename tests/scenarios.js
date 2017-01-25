@@ -1,6 +1,6 @@
 'use strict';
 
-var Calculator= require('../src/calculator');
+const Calculator = require('../src/calculator');
 let assert = require('chai').assert;
 
 
@@ -19,12 +19,19 @@ describe('my tests for kata calculator',()=>{
         assert.equal(summ,3);
     });
 
-    it('it should return summ if in string contain comma separated values', function () {
+    it('it should return summ of 2 comma separated numbers', function () {
         var myCalculator = new Calculator();
         let summ = myCalculator.summ('3,5');
         assert.equal(summ,8);
     });
 
+
+    it('it should return summ of any somma separated numbers ', function () {
+        let myCalculator = new Calculator();
+        let summ = myCalculator.summ('3,5,6,7');
+        assert.equal(summ,21);
+
+    });
 
 
     });
