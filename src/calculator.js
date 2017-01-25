@@ -18,7 +18,11 @@ class Calculator{
         }else{
             if (str.indexOf(',')>0){
             var digits = str.split(',');
-            result = parseInt(parseInt(digits[0])+parseInt(digits[1]));
+
+            result = digits.reduce((total,d)=>{
+                return parseInt(total)+parseInt(d);
+            });
+                //parseInt(parseInt(digits[0])+parseInt(digits[1]));
         }else{
             result = this.defaultValue
         }

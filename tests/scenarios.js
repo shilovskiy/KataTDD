@@ -26,7 +26,7 @@ describe('my tests for kata calculator',()=>{
     });
 
 
-    it('it should return summ of any somma separated numbers ', function () {
+    it('it should return summ of any comma separated numbers ', function () {
         let myCalculator = new Calculator();
         let summ = myCalculator.summ('3,5,6,7');
         assert.equal(summ,21);
